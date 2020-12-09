@@ -7,6 +7,7 @@ export default function App() {
       <img
         href="https://kuzek.si"
         style={{ width: "100%" }}
+        alt="Kužkov Festival 2020"
         src={
           "https://festivaldrop.s3.eu-north-1.amazonaws.com/dogodek-2020-cove-1920x1080+(1).jpg"
         }
