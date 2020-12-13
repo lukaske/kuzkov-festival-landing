@@ -21,12 +21,16 @@ export default function App() {
           Se vidimo na kuzek.si
         </a>
       </h2>
-      <ul className="sodelujoci">
-        {Object.keys(p).forEach(function (key) {
+      <table className="customers">
+      <tr>
+        <th>Sodelujoči</th>
+      </tr>
+
+        {Object.keys(p).map(function (key) {
             if (p.hasOwnProperty(key)) {
-              return <li><a href={p[key]}>{key}</a></li>
+              return <tr><td><a href={p[key]}>{key}</a></td></tr>
               }})}
-      </ul>
+      </table>
     </div>
   );
 }
