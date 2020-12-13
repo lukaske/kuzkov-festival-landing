@@ -14,22 +14,27 @@ export default function App() {
           "https://festivaldrop.s3.eu-north-1.amazonaws.com/dogodek-2020-cove-1920x1080+(1).jpg"
         }
       />
-      <h2 style={{ color: "#189adf" }}>
+      <h2 style={{ color: "#666" }}>
         Kužkov Festival 2020 je zaključen. Hvala za udeležbo!
+        <br/>
         <br/>
         <a style={{ color: "#189adf" }} href="https://kuzek.si">
           Se vidimo na kuzek.si
         </a>
       </h2>
+      <br/>
       <table className="customers">
       <tr>
         <th>Sodelujoči</th>
       </tr>
 
-        {Object.keys(p).map(function (key) {
+        {Object.keys(p).map((key) => {
             if (p.hasOwnProperty(key)) {
               return <tr><td><a href={p[key]}>{key}</a></td></tr>
-              }})}
+              }
+            else{
+              return null
+            }})}
       </table>
     </div>
   );
